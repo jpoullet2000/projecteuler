@@ -20,7 +20,7 @@ def get_primes(max_nr):
     return primes
 
 
-max_nr = 100000 #2_000_000
+max_nr = 2_000_000
 start_time = time.time()
 primes = get_primes(max_nr)
 print(f'The number of primes is {len(primes)}')
