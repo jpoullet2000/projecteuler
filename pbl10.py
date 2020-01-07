@@ -20,7 +20,7 @@ def get_primes(max_nr):
     return primes
 
 
-max_nr = 2_000_000
+max_nr = 100000 #2_000_000
 start_time = time.time()
 primes = get_primes(max_nr)
 print(f'The number of primes is {len(primes)}')
@@ -38,3 +38,4 @@ print(f'Time spent: {time_spent}')
 # The number of primes is 9592
 # The sum of primes is 454396537
 # Time spent: 5.078207969665527
+# FYI, without numba it takes 7x more time: Time spent: 35.02199864387512
