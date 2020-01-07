@@ -10,8 +10,7 @@ def get_primes(max_nr):
     primes = [2, 3]
     for num in range(5, max_nr):
         prime = True
-        primes_to_check = [prime for prime in primes if prime < num/2]
-        for i in primes_to_check: 
+        for i in primes:
             if (num % i) == 0:
                 prime = False
                 break
@@ -30,12 +29,12 @@ time_spent = stop_time - start_time
 print(f'Time spent: {time_spent}')
 
 # Answer: 
-# The number of primes is 148933
-# The sum of primes is 142913828922
-# Time spent: 1402.0321731567383
+#The number of primes is 148933
+#The sum of primes is 142913828922
+#Time spent: 39.52696514129639
 
-# For max_nr = 100_000 it only takes 5s. In that case we have
+# For max_nr = 100_000 it takes less than 1s. In that case we have
 # The number of primes is 9592
 # The sum of primes is 454396537
-# Time spent: 5.078207969665527
-# FYI, without numba it takes 7x more time: Time spent: 35.02199864387512
+# Time spent: 0.287992000579834
+# FYI, without numba it takes 7-10x more time: Time spent: 2.1709048748016357
